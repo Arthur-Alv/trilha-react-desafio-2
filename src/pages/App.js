@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import gitLogo from '../assets/github.png'
 import Input from '../components/Input';
 import Button from '../components/Button';
@@ -35,8 +35,14 @@ function App() {
 
   const handleRemoveRepo = (id) => {
     console.log('Removendo registro', id);
+    console.log(repos);
+    console.log(id);
 
-    // utilizar filter.
+    setRepos((repos.filter((dados) => id !== dados.id)))
+    
+ 
+    alert('Repositorio removido');
+    
   }
 
 
